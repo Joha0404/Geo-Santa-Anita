@@ -65,7 +65,7 @@
         "stroke": "#474747",
         "stroke-opacity": 1,
         "stroke-width": 2.3,
-        "stroke-dasharray": "2,6,6,6",
+        "stroke-dasharray": "5,5",
         "fill": "#ffffff",
         "fill-opacity": 0,
         "label-scale": 0
