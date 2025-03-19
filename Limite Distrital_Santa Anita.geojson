@@ -65,7 +65,7 @@
         "area": 10676553.66,
         "stroke": "#474747",
         "stroke-opacity": 1,
-        "stroke-width": 2.3,
+        "stroke-width": 2.45678910111121314,
         "stroke-dasharray": "2,6,6,6",
         "fill": "#ffffff",
         "fill-opacity": 0,
@@ -76,4 +76,16 @@
     }
   ]
 }
+L.geoJSON(geojsonData, {
+    style: function (feature) {
+        return {
+            color: feature.properties.stroke || "#474747", // Color del trazo
+            opacity: feature.properties["stroke-opacity"] || 1, // Opacidad del trazo
+            weight: feature.properties["stroke-width"] || 2.3, // Grosor del trazo
+            dashArray: feature.properties["stroke-dasharray"] || "2,6,6,6", // Patrón de línea
+            fillColor: feature.properties.fill || "#ffffff", // Color de relleno
+            fillOpacity: feature.properties["fill-opacity"] || 0 // Opacidad del relleno
+        };
+    }
+}).addTo(map);
 
